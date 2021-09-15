@@ -7,27 +7,108 @@
 
 {% block body %}
 
-	<h1>Loan Estimation Tool</h1>
-	
-	<p>Fill out the short form below to get a quick estimate on a loan</p>
-	
-	<div class="content">
-		{{ form(form) }}
-	</div>
+	<section class="shadow-box">
+		<div class="title-wrapper">
+			<h1>Loan Estimation Tool</h1>	
+			<p>Fill out the short form below to get a quick estimate on a loan</p>
+		</div>
 
-	<div class="results">
-	{% if formErrors %}
-		{% for error in formErrors %}
-			<p>{{ error }}</p>
-		{% endfor %}
-	{% elseif loanData %}
-		<h2>Your Estimated loan:</h2>
-		<ul>
-			<li>Origination Fee: ${{ loanData.fee }}</li>
-			<li>Interest Rate: {{ loanData.interestRate }}%</li>
-			<li>Monthly Payment: ${{ loanData.payment | number_format(2) }}</li>
-		</ul>
+		<div class="px-4 pb-3">
+
+			{% if loanData %}
+			<div class="content fade-up">
+			{% else %}
+			<div class="content">
+			{% endif %}
+				{{ form(form) }}
+			</div>
+
+			<div class="results">
+			{% if formErrors %}
+				{% for error in formErrors %}
+					<p>{{ error }}</p>
+				{% endfor %}
+				{{ form(resetForm) }}
+			{% elseif loanData %}
+				{{ form(resetForm) }}
+			{% endif %}
+			</div>
+		</div>
+
+	</section>
+
+	{% if not formErrors and loanData %}
+		<section class="shadow-box">	
+			<div class="title-wrapper secondary">
+				<h2>Loan Details</h2>	
+			</div>
+			<div class="px-4 pb-3 flex between split">
+				<div>
+					<h5>Your Estimated loan:</h5>
+					<ul class="list-group">
+						<li class="list-group-item">APR: {{ loanData.apr }}%</li>
+						<li class="list-group-item">Interest Rate: {{ loanData.interestRate }}%</li>
+						<li class="list-group-item">Origination Fee: ${{ loanData.fee }}</li>
+						<li class="list-group-item">Monthly Payment: ${{ loanData.payment | number_format(2) }}</li>
+					</ul>
+				</div>
+				<div>
+					<h5>Submitted details:</h5>
+					<ul class="list-group">
+						<li class="list-group-item">Loan Amount: ${{ loanData.amount }}</li>
+						<li class="list-group-item">Monthly Income: ${{ loanData.income }}</li>
+						<li class="list-group-item">Term: {{ loanData.term }} months</li>
+						<li class="list-group-item">Credit: {{ loanData.creditScore | capitalize}}</li>
+					</ul>	
+				</div>			
+			</div>
+			<div class="px-4 pb-3 flex between">
+				<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#paymentTable" aria-expanded="false" aria-controls="collapseExample">
+					View payment schedual
+				</button>
+			</div>
+			<div class="collapse" id="paymentTable">	
+				<div class="px-4 text-right">
+					{{ form(emailPDF) }}			
+				</div>		
+				<div class="table-wrapper">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Month</th>
+								<th scope="col">Amount</th>
+								<th scope="col">Interest</th>
+								<th scope="col">Principle</th>
+								<th scope="col">Remaining balance</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+		</section>
 	{% endif %}
-	</div>
 
 {% endblock %}
