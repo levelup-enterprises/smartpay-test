@@ -62,7 +62,6 @@ class LoanParameter
 	}
 
 	/**
-	 *
 	 * Origination fee is 5% of the first $5000, and then 2% of the rest, rounded to the nearest dollar
 	 *
 	 * @param  int  $amount
@@ -84,7 +83,6 @@ class LoanParameter
 	}
 
 	/**
-	 *
 	 * Get APR
 	 *
 	 * @param  int  $principle
@@ -104,18 +102,14 @@ class LoanParameter
 		// Get years in term
 		$yrs = $term / 12;
 
-		// Set rate as percentage
-		$rate = round($rate / 100, 2);
-
 		// Get simple interest accrued
-		$interest = $principle * (1 + $rate * $yrs) - $principle;
+		$interest = self::getInterestAccrued($principle, $rate, $yrs);
 
 		return round((($fee + $interest) / $principle / $yrs) * 1 * 100, 2);
 	}
 
 	/**
-	 *
-	 * Affordability is the loan payment not being more than 15% of monthly income
+	 * Check if the loan payment is not more than 15% of monthly income
 	 *
 	 * @param  int  $payment
 	 * @param  int  $income
@@ -136,5 +130,25 @@ class LoanParameter
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * Get simple interest accrued for the term
+	 *
+	 * @param  int  $principle
+	 * @param  float  $rate
+	 * @param  int  $yrs
+	 *
+	 * @return float
+	 */
+	public static function getInterestAccrued(
+		int $principle,
+		float $rate,
+		int $yrs
+	): float {
+		// Set rate as percentage
+		$rate = round($rate / 100, 2);
+		// Get total interest
+		return round($principle * (1 + $rate * $yrs) - $principle, 2);
 	}
 }

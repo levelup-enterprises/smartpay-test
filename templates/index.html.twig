@@ -1,13 +1,21 @@
 {# templates/index.html.twig #}
 {# @var form \Symfony\Component\Form\FormView #}
+{# @var resetForm \Symfony\Component\Form\FormView #}
+{# @var emailPDF \Symfony\Component\Form\FormView #}
 {# @var loanData array #}
+{# @var schedule array #}
 {# @var formErrors array|string[] #}
+
 
 {% extends 'base.html.twig' %}
 
 {% block body %}
 
+	{% if not formErrors and loanData %}
+	<section class="shadow-box hide-left">
+	{% else %}
 	<section class="shadow-box">
+	{% endif %}
 		<div class="title-wrapper">
 			<h1>Loan Estimation Tool</h1>	
 			<p>Fill out the short form below to get a quick estimate on a loan</p>
@@ -15,11 +23,7 @@
 
 		<div class="px-4 pb-3">
 
-			{% if loanData %}
-			<div class="content fade-up">
-			{% else %}
 			<div class="content">
-			{% endif %}
 				{{ form(form) }}
 			</div>
 
@@ -28,9 +32,6 @@
 				{% for error in formErrors %}
 					<p>{{ error }}</p>
 				{% endfor %}
-				{{ form(resetForm) }}
-			{% elseif loanData %}
-				{{ form(resetForm) }}
 			{% endif %}
 			</div>
 		</div>
@@ -38,7 +39,7 @@
 	</section>
 
 	{% if not formErrors and loanData %}
-		<section class="shadow-box">	
+		<section class="shadow-box hide-right bottom-150">	
 			<div class="title-wrapper secondary">
 				<h2>Loan Details</h2>	
 			</div>
@@ -48,15 +49,15 @@
 					<ul class="list-group">
 						<li class="list-group-item">APR: {{ loanData.apr }}%</li>
 						<li class="list-group-item">Interest Rate: {{ loanData.interestRate }}%</li>
-						<li class="list-group-item">Origination Fee: ${{ loanData.fee }}</li>
+						<li class="list-group-item">Origination Fee: ${{ loanData.fee | number_format(2) }}</li>
 						<li class="list-group-item">Monthly Payment: ${{ loanData.payment | number_format(2) }}</li>
 					</ul>
 				</div>
 				<div>
 					<h5>Submitted details:</h5>
 					<ul class="list-group">
-						<li class="list-group-item">Loan Amount: ${{ loanData.amount }}</li>
-						<li class="list-group-item">Monthly Income: ${{ loanData.income }}</li>
+						<li class="list-group-item">Loan Amount: ${{ loanData.amount | number_format(2) }}</li>
+						<li class="list-group-item">Monthly Income: ${{ loanData.income | number_format(2) }}</li>
 						<li class="list-group-item">Term: {{ loanData.term }} months</li>
 						<li class="list-group-item">Credit: {{ loanData.creditScore | capitalize}}</li>
 					</ul>	
@@ -66,44 +67,35 @@
 				<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#paymentTable" aria-expanded="false" aria-controls="collapseExample">
 					View payment schedual
 				</button>
+				{{ form(resetForm) }}
 			</div>
 			<div class="collapse" id="paymentTable">	
 				<div class="px-4 text-right">
 					{{ form(emailPDF) }}			
 				</div>		
 				<div class="table-wrapper">
-					<table class="table">
-						<thead>
+					<table class="table table-striped">
+						<thead class="thead-dark">
 							<tr>
+								<th scope="col">#</th>
 								<th scope="col">Month</th>
 								<th scope="col">Amount</th>
 								<th scope="col">Interest</th>
-								<th scope="col">Principle</th>
-								<th scope="col">Remaining balance</th>
+								<th scope="col">Principal</th>
+								<th scope="col">Balance</th>
 							</tr>
 						</thead>
 						<tbody>
+						{% for data in schedule %}
 							<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-								<td>@twitter</td>
-							</tr>
+								<th scope="row">{{data.id}}</th>
+								<th>{{data.date}}</th>
+								<td>${{data.amount | number_format(2)}}</td>
+								<td>${{data.interest | number_format(2)}}</td>
+								<td>${{data.principal | number_format(2)}}</td>
+								<td>${{data.balance | number_format(2)}}</td>							
+							</tr>	
+						{% endfor %}
 						</tbody>
 					</table>
 				</div>	

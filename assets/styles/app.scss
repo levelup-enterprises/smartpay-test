@@ -2,14 +2,36 @@
 $primaryBgColor: #4c96d8;
 $primaryTextColor: #fff;
 $secondaryBgColor: #4cd0d8;
+// Structure
+$maxContentWidth: 900px;
+
+html {
+	height: 100%;
+}
 
 body {
 	background-color: lightgray;
+	overflow-x: hidden;
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 107px;
+}
+
+nav {
+	box-shadow: 0 0 10px #80808030;
+
+	img {
+		width: 39px;
+		margin-right: 10px;
+	}
+	a {
+		color: #7d7d7d !important;
+	}
 }
 
 section {
 	width: 100%;
-	max-width: 900px;
+	max-width: $maxContentWidth;
 	margin: 5px;
 
 	&.shadow-box {
@@ -49,12 +71,58 @@ form {
 	}
 
 	#reset_form {
+		height: 40px;
 		width: 100%;
+	}
+
+	#email_pdf {
 		display: inline-flex;
-		justify-content: space-between;
-		// margin-top: 2em;
+
+		> div:first-of-type {
+			margin-right: 10px;
+		}
+
+		label {
+			display: none;
+		}
 	}
 }
+
+footer {
+	width: 100%;
+	height: 107px;
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+	padding: 20px;
+
+	.easter-egg {
+		text-decoration: none;
+
+		span {
+			transition: 0.5s ease-in-out;
+			display: inline-block;
+			width: 30px;
+			margin: 0 2px;
+			color: red;
+		}
+
+		&:hover {
+			span {
+				transition: 0.5s ease-in-out;
+				transform: translateY(-12px);
+			}
+		}
+	}
+}
+
+#paymentTable {
+	border-top: 1px dashed rgba(86, 86, 86, 0.39);
+	padding-top: 16px;
+}
+
+// Utilities
+// -------------------------------------
 
 .flex {
 	width: 100%;
@@ -73,13 +141,41 @@ form {
 	}
 }
 
-.fade-down {
-	display: none;
-}
-
 .table-wrapper {
 	overflow: scroll;
 }
+
+.bottom-150 {
+	margin-bottom: 150px !important;
+}
+// -------------------------------------
+
+// Slide effect
+// -------------------------------------
+.hide-left {
+	left: 0;
+	opacity: 1;
+
+	&.slide-out {
+		opacity: 0;
+		position: absolute;
+		left: -$maxContentWidth;
+		transition: 1s;
+	}
+}
+
+.hide-right {
+	right: -$maxContentWidth;
+	opacity: 0;
+
+	&.slide-in {
+		opacity: 1;
+		position: relative;
+		right: 0;
+		transition: 1s;
+	}
+}
+// -------------------------------------
 
 // Mobile responsive
 @media screen and (max-width: 910px) {

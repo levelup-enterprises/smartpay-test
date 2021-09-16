@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\LoanParameter;
 use App\Service\LoanCalculator;
+use App\Service\EmailService;
 
 /**
  * @Route("/")
@@ -23,31 +24,22 @@ class DefaultController extends AbstractController
 	public function home(
 		Request $request,
 		LoanParameter $loanParameterService,
-		LoanCalculator $loanCalculatorService
+		EmailService $emailService
 	): Response {
 		$form = $this->createForm(LoanType::class);
 		$resetForm = $this->createForm(ResetForm::class);
-		$email = $this->createForm(EmailPDF::class);
+		$emailForm = $this->createForm(EmailPDF::class);
 
 		$formErrors = [];
 		$loanData = [];
 
+		//# Loan form handling
 		$form->handleRequest($request);
 		if ($form->isSubmitted() && $form->isValid()) {
 			$data = $form->getData();
 
 			//  Process submitted data
 			try {
-				// Clear values
-				if (isset($data["reset"])) {
-					$data = [];
-				}
-
-				// Handle email
-				if (isset($data["email"])) {
-					$data = [];
-				}
-
 				//  Check for requesting too large of an amount
 				if (
 					$data["amount"] >
@@ -76,18 +68,26 @@ class DefaultController extends AbstractController
 						$data["amount"]
 					);
 
-					$payment = $loanCalculatorService->getMonthlyPayment(
-						$data["amount"] + $fee,
-						$interestRate,
-						$data["term"]
-					);
-
 					$apr = $loanParameterService->getAPR(
 						$data["amount"],
 						$interestRate,
 						$data["term"],
 						$fee
 					);
+
+					/** -------------------------------------------
+					 *  Init loan calculator with all required
+					 * 		values for both payment and payment
+					 * 		schedule.
+					 */
+					$loanCalculatorService = new LoanCalculator(
+						$data["amount"],
+						$interestRate,
+						$data["term"],
+						$fee
+					);
+					$payment = $loanCalculatorService->getMonthlyPayment();
+					$schedule = $loanCalculatorService->getPaymentSchedule();
 
 					// Check if payment is not more than 15% of gross income
 					if (
@@ -101,6 +101,7 @@ class DefaultController extends AbstractController
 						];
 					}
 
+					// Loan values
 					$loanData["interestRate"] = $interestRate;
 					$loanData["fee"] = $fee;
 					$loanData["payment"] = $payment;
@@ -118,12 +119,32 @@ class DefaultController extends AbstractController
 			}
 		}
 
+		//# Email form handling
+		$emailForm->handleRequest($request);
+		if ($emailForm->isSubmitted() && $emailForm->isValid()) {
+			$data = $emailForm->getData();
+
+			//  Process submitted data
+			try {
+				// Handle email
+				if (isset($data["email"])) {
+					print_r($data["email"]);
+					$emailService->sendEmail($data["email"]);
+				}
+			} catch (\Exception $e) {
+				$formErrors = [
+					"Please check your inputs and resubmit the form",
+				];
+			}
+		}
+
 		return $this->render("index.html.twig", [
 			"form" => $form->createView(),
 			"formErrors" => $formErrors,
 			"loanData" => $loanData,
+			"schedule" => isset($schedule) ? $schedule : "",
 			"resetForm" => $resetForm->createView(),
-			"emailPDF" => $email->createView(),
+			"emailPDF" => $emailForm->createView(),
 		]);
 	}
 }

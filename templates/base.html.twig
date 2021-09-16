@@ -8,7 +8,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	
-		<title>{% block title %}Welcome!{% endblock %}</title>
+		<title>{% block title %}Let's estimate!{% endblock %}</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
 			   and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
@@ -20,7 +20,18 @@
 		{% endblock %}
 	</head>
 	<body>
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="{{asset("favicon.ico")}}" alt="logo" />Loan Estimation Tool</a>
+		</nav>
+
 		{% block body %}{% endblock %}
+
+		<footer>
+			<div class="container">
+				<h6>Loan Estimator Tool &#xa9; 2021</h6>
+				<p>Learn more about this grand experiment at <a href="https://levelup.enterprises" class="easter-egg">level<span>{up}</span>developers</a></p>
+			</div>
+		</footer>
 
 		<!-- Optional JavaScript; choose one of the two! -->
 
