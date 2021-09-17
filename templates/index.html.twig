@@ -20,7 +20,6 @@
 			<h1>Loan Estimation Tool</h1>	
 			<p>Fill out the short form below to get a quick estimate on a loan</p>
 		</div>
-
 		<div class="px-4 pb-3">
 
 			<div class="content">
@@ -35,11 +34,10 @@
 			{% endif %}
 			</div>
 		</div>
-
 	</section>
 
 	{% if not formErrors and loanData %}
-		<section class="shadow-box hide-right bottom-150">	
+		<section class="shadow-box hide-right bottom-150 pdf-content">	
 			<div class="title-wrapper secondary">
 				<h2>Loan Details</h2>	
 			</div>
@@ -102,5 +100,12 @@
 			</div>
 		</section>
 	{% endif %}
+
+	<div class="popup shadow-box hide-popup">
+		<div class="container flex between">
+			<h5 class="content">Email has been sent!</h5>
+			<button class="btn btn-link close">&#x2715;</button>
+		</div>
+	</div>
 
 {% endblock %}

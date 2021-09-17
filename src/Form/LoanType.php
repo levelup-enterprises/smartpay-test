@@ -17,6 +17,7 @@ class LoanType extends AbstractType
 			->add("amount", MoneyType::class, [
 				"currency" => "usd",
 				"html5" => true,
+				"help" => "Minimum of $1000",
 				"attr" => [
 					"min" => 1000,
 					"max" => 75000,

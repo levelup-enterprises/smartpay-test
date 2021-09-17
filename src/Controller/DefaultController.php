@@ -5,26 +5,31 @@ namespace App\Controller;
 use App\Form\LoanType;
 use App\Form\ResetForm;
 use App\Form\EmailPDF;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\LoanParameter;
 use App\Service\LoanCalculator;
-use App\Service\EmailService;
 
 /**
  * @Route("/")
  */
 class DefaultController extends AbstractController
 {
+	private $requestStack;
+
+	public function __construct(RequestStack $requestStack)
+	{
+		$this->requestStack = $requestStack;
+	}
 	/**
 	 * @Route("/", name="home")
 	 */
 	public function home(
 		Request $request,
-		LoanParameter $loanParameterService,
-		EmailService $emailService
+		LoanParameter $loanParameterService
 	): Response {
 		$form = $this->createForm(LoanType::class);
 		$resetForm = $this->createForm(ResetForm::class);
@@ -111,30 +116,16 @@ class DefaultController extends AbstractController
 					$loanData["income"] = $data["monthlyGrossIncome"];
 					$loanData["term"] = $data["term"];
 					$loanData["creditScore"] = $data["creditScore"];
+
+					// Save as session values for pdf build
+					$session = $this->requestStack->getSession();
+					$session->set("loanData", $loanData);
+					$session->set("schedule", $schedule);
 				} catch (\Exception $e) {
 					$formErrors = [
 						"Please check your inputs and resubmit the form",
 					];
 				}
-			}
-		}
-
-		//# Email form handling
-		$emailForm->handleRequest($request);
-		if ($emailForm->isSubmitted() && $emailForm->isValid()) {
-			$data = $emailForm->getData();
-
-			//  Process submitted data
-			try {
-				// Handle email
-				if (isset($data["email"])) {
-					print_r($data["email"]);
-					$emailService->sendEmail($data["email"]);
-				}
-			} catch (\Exception $e) {
-				$formErrors = [
-					"Please check your inputs and resubmit the form",
-				];
 			}
 		}
 

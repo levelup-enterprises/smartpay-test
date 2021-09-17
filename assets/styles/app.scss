@@ -7,6 +7,7 @@ $maxContentWidth: 900px;
 
 html {
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,15 @@ nav {
 	}
 	a {
 		color: #7d7d7d !important;
+	}
+
+	.navbar-brand img {
+		transition: 0.5s ease-in-out;
+
+		&:hover {
+			transition: 0.5s ease-in-out;
+			transform: rotate(360deg);
+		}
 	}
 }
 
@@ -116,6 +126,25 @@ footer {
 	}
 }
 
+.popup {
+	position: fixed;
+	top: 100px;
+	right: 0;
+	background: #e6e47f;
+	width: 300px;
+
+	.container {
+		padding: 20px;
+		align-items: center;
+		.close {
+			font-size: 1.5em;
+		}
+		h5 {
+			margin: 0;
+		}
+	}
+}
+
 #paymentTable {
 	border-top: 1px dashed rgba(86, 86, 86, 0.39);
 	padding-top: 16px;
@@ -175,6 +204,18 @@ footer {
 		transition: 1s;
 	}
 }
+
+.hide-popup {
+	right: -300px;
+	opacity: 0;
+	transition: 1s;
+
+	&.slide-in {
+		opacity: 1;
+		right: 0;
+		transition: 1s;
+	}
+}
 // -------------------------------------
 
 // Mobile responsive
@@ -194,6 +235,13 @@ footer {
 		}
 	}
 
+	.hide-popup {
+		top: 67px;
+		&.slide-in {
+			width: 100%;
+		}
+	}
+
 	.flex {
 		&.split {
 			> :nth-child(2) {
@@ -203,5 +251,18 @@ footer {
 				max-width: 100%;
 			}
 		}
+	}
+}
+
+// For print
+@media print {
+	body {
+		margin: 0;
+		color: #000;
+		background-color: #fff;
+	}
+
+	nav {
+		display: none;
 	}
 }

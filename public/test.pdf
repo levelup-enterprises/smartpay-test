@@ -1,0 +1,524 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 6182>>
+stream
+0.57 w
+0 G
+q
+q BT 42.52 799.37 Td
+0 -18.00 Td
+/F10 18.00 Tf (Loan Details) Tj
+ET Q
+q BT 42.52 766.43 Td
+0 -12.00 Td
+/F10 9.96 Tf (Your Estimated loan:) Tj
+ET Q
+q BT 42.52 737.80 Td
+0 -12.00 Td
+/F9 12.00 Tf (APR: 30%) Tj
+ET Q
+q BT 42.52 725.80 Td
+0 -12.00 Td
+/F9 12.00 Tf (Interest Rate: 25%) Tj
+ET Q
+q BT 42.52 713.80 Td
+0 -12.00 Td
+/F9 12.00 Tf (Origination Fee: $50.00) Tj
+ET Q
+q BT 42.52 701.80 Td
+0 -12.00 Td
+/F9 12.00 Tf (Monthly Payment: $99.80) Tj
+ET Q
+q BT 42.52 689.80 Td
+0 -12.00 Td
+/F10 9.96 Tf (Submitted details:) Tj
+ET Q
+q BT 42.52 661.16 Td
+0 -12.00 Td
+/F9 12.00 Tf (Loan Amount: $1,000.00) Tj
+ET Q
+q BT 42.52 649.16 Td
+0 -12.00 Td
+/F9 12.00 Tf (Monthly Income: $800.00) Tj
+ET Q
+q BT 42.52 637.16 Td
+0 -12.00 Td
+/F9 12.00 Tf (Term: 12 months) Tj
+ET Q
+q BT 42.52 625.16 Td
+0 -12.00 Td
+/F9 12.00 Tf (Credit: Poor) Tj
+ET Q
+q BT 42.52 612.41 Td
+0 -12.00 Td
+/F9 10.00 Tf (View payment schedual) Tj
+ET Q
+q BT 42.52 598.91 Td
+0 -12.00 Td
+/F9 10.00 Tf (Start over) Tj
+ET Q
+q BT 42.52 586.16 Td
+0 -12.00 Td
+/F9 12.00 Tf (Email) Tj
+ET Q
+q BT 42.52 574.16 Td
+0 -12.00 Td
+/F9 10.00 Tf (Send yourself an email with this payment schedule) Tj
+ET Q
+q BT 42.52 561.41 Td
+0 -12.00 Td
+/F9 10.00 Tf (Email PDF) Tj
+ET Q
+q BT 42.52 547.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (#) Tj
+ET Q
+q BT 42.52 534.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (Month) Tj
+ET Q
+q BT 42.52 520.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (Amount) Tj
+ET Q
+q BT 42.52 507.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (Interest) Tj
+ET Q
+q BT 42.52 493.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (Principal) Tj
+ET Q
+q BT 42.52 480.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (Balance) Tj
+ET Q
+q BT 42.52 466.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (1) Tj
+ET Q
+q BT 42.52 453.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (10-01-2021) Tj
+ET Q
+q BT 42.52 439.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 426.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($24.94) Tj
+ET Q
+q BT 42.52 412.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($74.86) Tj
+ET Q
+q BT 42.52 399.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($1,197.60) Tj
+ET Q
+q BT 42.52 385.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (2) Tj
+ET Q
+q BT 42.52 372.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (11-01-2021) Tj
+ET Q
+q BT 42.52 358.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 345.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($22.85) Tj
+ET Q
+q BT 42.52 331.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($76.95) Tj
+ET Q
+q BT 42.52 318.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($1,097.80) Tj
+ET Q
+q BT 42.52 304.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (3) Tj
+ET Q
+q BT 42.52 291.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (12-01-2021) Tj
+ET Q
+q BT 42.52 277.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 264.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($20.79) Tj
+ET Q
+q BT 42.52 250.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($79.01) Tj
+ET Q
+q BT 42.52 237.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($998.00) Tj
+ET Q
+q BT 42.52 223.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (4) Tj
+ET Q
+q BT 42.52 210.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (01-01-2022) Tj
+ET Q
+q BT 42.52 196.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 183.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($18.71) Tj
+ET Q
+q BT 42.52 169.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($81.09) Tj
+ET Q
+q BT 42.52 156.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($898.20) Tj
+ET Q
+q BT 42.52 142.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (5) Tj
+ET Q
+q BT 42.52 129.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (02-01-2022) Tj
+ET Q
+q BT 42.52 115.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 102.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($16.63) Tj
+ET Q
+q BT 42.52 88.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($83.17) Tj
+ET Q
+q BT 42.52 75.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($798.40) Tj
+ET Q
+q BT 42.52 61.91 Td
+0 -12.00 Td
+/F10 12.00 Tf (6) Tj
+ET Q
+q BT 42.52 48.41 Td
+0 -12.00 Td
+/F10 12.00 Tf (03-01-2022) Tj
+ET Q
+q BT 42.52 34.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 21.41 Td
+0 -12.00 Td
+/F9 12.00 Tf ($14.54) Tj
+ET Q
+q BT 42.52 7.91 Td
+0 -12.00 Td
+/F9 12.00 Tf ($85.26) Tj
+ET Q
+q BT 42.52 -5.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($698.60) Tj
+ET Q
+q BT 42.52 -19.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (7) Tj
+ET Q
+q BT 42.52 -32.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (04-01-2022) Tj
+ET Q
+q BT 42.52 -46.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -59.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($12.46) Tj
+ET Q
+q BT 42.52 -73.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($87.34) Tj
+ET Q
+q BT 42.52 -86.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($598.80) Tj
+ET Q
+q BT 42.52 -100.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (8) Tj
+ET Q
+q BT 42.52 -113.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (05-01-2022) Tj
+ET Q
+q BT 42.52 -127.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -140.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($10.40) Tj
+ET Q
+q BT 42.52 -154.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($89.40) Tj
+ET Q
+q BT 42.52 -167.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($499.00) Tj
+ET Q
+q BT 42.52 -181.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (9) Tj
+ET Q
+q BT 42.52 -194.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (06-01-2022) Tj
+ET Q
+q BT 42.52 -208.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -221.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($8.31) Tj
+ET Q
+q BT 42.52 -235.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($91.49) Tj
+ET Q
+q BT 42.52 -248.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($399.20) Tj
+ET Q
+q BT 42.52 -262.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (10) Tj
+ET Q
+q BT 42.52 -275.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (07-01-2022) Tj
+ET Q
+q BT 42.52 -289.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -302.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($6.23) Tj
+ET Q
+q BT 42.52 -316.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($93.57) Tj
+ET Q
+q BT 42.52 -329.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($299.40) Tj
+ET Q
+q BT 42.52 -343.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (11) Tj
+ET Q
+q BT 42.52 -356.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (08-01-2022) Tj
+ET Q
+q BT 42.52 -370.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -383.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($4.15) Tj
+ET Q
+q BT 42.52 -397.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($95.65) Tj
+ET Q
+q BT 42.52 -410.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($199.60) Tj
+ET Q
+q BT 42.52 -424.09 Td
+0 -12.00 Td
+/F10 12.00 Tf (12) Tj
+ET Q
+q BT 42.52 -437.59 Td
+0 -12.00 Td
+/F10 12.00 Tf (09-01-2022) Tj
+ET Q
+q BT 42.52 -451.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+q BT 42.52 -464.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($2.06) Tj
+ET Q
+q BT 42.52 -478.09 Td
+0 -12.00 Td
+/F9 12.00 Tf ($97.74) Tj
+ET Q
+q BT 42.52 -491.59 Td
+0 -12.00 Td
+/F9 12.00 Tf ($99.80) Tj
+ET Q
+Q
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+5 0 obj
+<</BaseFont/Helvetica/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+6 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Oblique/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+8 0 obj
+<</BaseFont/Helvetica-BoldOblique/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Courier/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Oblique/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+12 0 obj
+<</BaseFont/Courier-BoldOblique/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+13 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+14 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+15 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+16 0 obj
+<</BaseFont/Times-BoldItalic/Type/Font
+/Encoding/WinAnsiEncoding
+/Subtype/Type1>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+17 0 obj
+<<
+/Producer (jsPDF 20120619)
+/CreationDate (D:20210916204417)
+>>
+endobj
+18 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000006319 00000 n 
+0000007548 00000 n 
+0000000009 00000 n 
+0000000087 00000 n 
+0000006406 00000 n 
+0000006496 00000 n 
+0000006591 00000 n 
+0000006689 00000 n 
+0000006791 00000 n 
+0000006879 00000 n 
+0000006973 00000 n 
+0000007070 00000 n 
+0000007171 00000 n 
+0000007264 00000 n 
+0000007356 00000 n 
+0000007450 00000 n 
+0000007772 00000 n 
+0000007854 00000 n 
+trailer
+<<
+/Size 19
+/Root 18 0 R
+/Info 17 0 R
+>>
+startxref
+7958
+%%EOF
